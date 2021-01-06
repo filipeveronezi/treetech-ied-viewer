@@ -1,0 +1,92 @@
+@keyframes ledOff {
+    0% {
+      box-shadow: 0px 0px 7px 0 red;
+      background: red;
+    }
+    100% {  
+      box-shadow: none;
+      background: darkred;
+    }
+  }
+  
+  @keyframes ledOn {
+    0% {
+      box-shadow: none;
+      background: darkred;
+    }
+    100% {
+      box-shadow: 0px 0px 7px 0 red;
+      background: red;
+    }
+  }
+  
+  @keyframes ledBlink {
+    0% {
+      box-shadow: none;
+      background: darkred;
+    }
+    50% {
+      box-shadow: 0px 0px 7px 0 red;
+      background: red;
+    }
+    100% {
+      box-shadow: none;
+      background: darkred;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: rotate(10deg) skew(10deg) translate(0, 0);
+    }
+    50% {
+      transform: rotate(10deg) skew(10deg) translateY(20px);
+    }
+    100% {
+      transform: rotate(10deg) skew(10deg) translate(0, 0);
+    }
+  }
+  
+  .animate-ledOff {
+    animation-name: ledOff;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animate-ledOn {
+    animation-name: ledOn;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animate-ledBlink {
+    animation-name: ledBlink;
+    animation-duration: .6s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+  }
+  
+  .animate-float {
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .animate-blink {
+    animation-name: blink;
+    animation-duration: .6s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+  }
